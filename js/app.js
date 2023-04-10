@@ -1,5 +1,5 @@
 //username
-let username = prompt('Enter your username', 'username')
+let username = prompt('Enter your username')
 
 //gender
 let gender = prompt('your gender, it should be male/female')
@@ -31,7 +31,7 @@ let skip = confirm('Are you sure you want to skip the welcoming message?')
 
 if (skip === false) {
 
-    let welcomingMassege = alert('Welcome ' + ms + ' ' + username)
+    let welcomingMessage = alert('Welcome ' + ms + ' ' + username)
 }
 
 
