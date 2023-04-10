@@ -16,14 +16,15 @@ if (gender === 'male') {
 }
 
 //age
-let ageAlert = alert('your age must be more than zero ->')
 
 
-let age = prompt('your age, must be more than zero')
+
+let age = prompt('your age')
 
 //check age
 if (age <= 0) {
 
+    let ageAlert = alert('your age must be more than zero ->')
     age = prompt('your age, must be more than zero')
 }
 
