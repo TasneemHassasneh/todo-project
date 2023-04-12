@@ -1,12 +1,6 @@
 'use strict';
 
-function isEmpty(str){
-    if(str.length === 0) {
-    str = 'invalid'
-    }
-    console.log(str)
-}
-
+//functions
 function storeData(){
     return userData.push(
         ['user name :',username], 
@@ -17,26 +11,43 @@ function storeData(){
         ['have pet :',havePet])
 }
 
+function isEmpty(str){
+    if( str.length === 0) {
+        return true
+    }
+    return false
+}
+
+function checkString(){
+    for (let i =0 ; i < userData.length;i++ ){
+        if(isEmpty(userData[i][1])){
+            userData[i][1] = 'invalid'
+        }
+    }
+}
+
 function printData(){
-    for(let i = 0 ; i<userData.length ; i++){
+    for(let i = 0 ; i<userData.length-1 ; i++){
         for ( let j =0 ;j<2;j++){
             console.log(userData[i][j] )
         }
     }
 }
 
+function checkAnswer(str){
+    while((str !== 'yes') && (str !== 'no')){
+        str=prompt("your answer should be yes/no")
+    }
+}
 
 
+//recourses
 let userData =[];
 
-//username
 let username = prompt('Enter your username')
-isEmpty(username)
 
-//gender
 let gender = prompt('your gender, it should be male/female')
 
-//ms or mr
 let ms = ''
 
 if (gender === 'male') {
@@ -47,35 +58,32 @@ if (gender === 'male') {
     ms = ''
 }
 
-//age
-
-
-
 let age = prompt('your age')
-
-//check age
-if (age <= 0) {
-
-    let ageAlert = alert('your age must be more than zero ->')
-    age = prompt('your age, must be more than zero')
+while(age <= 0){
+    age=prompt('your age ,must be more than zero')
 }
 
-let activePerson = confirm('Are you an active person?')
+let activePerson = prompt('Are you an active person?')
+checkAnswer(activePerson)
 
-let likeMusic = confirm('Do you like to work while listening to music?')
+let likeMusic = prompt('Do you like to work while listening to music?')
+checkAnswer(likeMusic)
 
-let havePet = confirm('Do you have pets?')
+let havePet = prompt('Do you have pets?')
+checkAnswer(havePet)
 
 let skip = confirm('Are you sure you want to skip the welcoming message?')
 
-if (skip === false) {
+if (!skip) {
 
     let welcomingMessage = alert('Welcome ' + ms + ' ' + username)
 }
 
 storeData()
 
-console.log( printData())
+checkString()
+
+printData()
 
 
 
