@@ -1,46 +1,25 @@
 'use strict';
 
 //functions
-function storeData(){
-    return userData.push(
-        ['user name :',username], 
-        ['gender :',gender],
-        ['age :',age],
-        ['active person :',activePerson],
-        ['like music :',likeMusic],
-        ['have pet :',havePet])
+function question(str){
+    let q = prompt(str)
+    if(isEmpty(q)){
+        return q='invalid'
+    }
+    return q
 }
 
 function isEmpty(str){
-    if( str.length === 0) {
+    if(str.length===0)
         return true
-    }
     return false
 }
 
-function checkString(){
-    for (let i =0 ; i < userData.length;i++ ){
-        if(isEmpty(userData[i][1])){
-            userData[i][1] = 'invalid'
-        }
+function printData(arr){
+    for(let i = 0 ; i <= arr.length ; i++){
+        console.log(arr[i])
     }
 }
-
-function printData(){
-    for(let i = 0 ; i<userData.length-1 ; i++){
-        for ( let j =0 ;j<2;j++){
-            console.log(userData[i][j] )
-        }
-    }
-}
-
-function checkAnswer(str){
-    while((str !== 'yes') && (str !== 'no')){
-        str=prompt("your answer should be yes/no")
-    }
-}
-
-
 //recourses
 let userData =[];
 
@@ -59,32 +38,24 @@ if (gender === 'male') {
 }
 
 let age = prompt('your age')
-while(age <= 0){
-    age=prompt('your age ,must be more than zero')
-}
-
-let activePerson = prompt('Are you an active person?')
-checkAnswer(activePerson)
-
-let likeMusic = prompt('Do you like to work while listening to music?')
-checkAnswer(likeMusic)
-
-let havePet = prompt('Do you have pets?')
-checkAnswer(havePet)
 
 let skip = confirm('Are you sure you want to skip the welcoming message?')
+
 
 if (!skip) {
 
     let welcomingMessage = alert('Welcome ' + ms + ' ' + username)
 }
 
-storeData()
-
-checkString()
-
-printData()
+let str1 ="Question1"
+let ans1 = question(str1)
 
 
+let str2 ="Question2"
+let ans2 = question(str2)
 
+let str3 ="Question3"
+let ans3 = question(str3)
 
+ userData=[ans1,ans2,ans3]
+ printData(userData)
