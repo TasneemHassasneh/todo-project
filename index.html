@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
     <title>Todo</title>
 </head>
 
@@ -13,51 +14,66 @@
             <nav>
                 <ul>
                     <a href="index.html">
-                        <li>Home</li>
+                        <li> <img src="./assets/logo.png" /> </li>
                     </a>
-                    <a href="about.html">
-                        <li>About</li>
-                    </a>
+                    <div class="navigation">
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About</li>
+                        </a>
+                    </div>
+
+
                 </ul>
             </nav>
             <h2>
-                <img src="./assets/logo.png" />
-                Todo Project
+                Todo List
             </h2>
         </header>
     </section>
- <section>
-    <table>
-        <thead>
-            <tr>
-                <th>Task</th>
-                <th>Status</th>
-            </tr>
+    <section class="section2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                </tr>
 
-        </thead>
-        <tbody>
-            <tr>
-                <td>task1</td>
-                <td>done</td>
-            </tr>
-            <tr>
-                <td>task2</td>
-                <td>done</td>
-            </tr>
-            <tr>
-                <td>task3</td>
-                <td>done</td>
-            </tr>
-           
-        </tbody>
-    </table>
- </section>
-<section>
-    <footer>
-        &copy; 2023 Tasneem Hassasneh
-    </footer>
-</section>
- 
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        task1
+                        <input type="checkbox">
+                    </td>
+                    <td>done</td>
+                </tr>
+                <tr>
+                    <td>
+                        task2
+                        <input type="checkbox">
+                    </td>
+                    <td>done</td>
+                </tr>
+                <tr>
+                    <td>
+                        task3
+                        <input type="checkbox">
+                    </td>
+                    <td>done</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <footer>
+            &copy; 2023 Tasneem Hassasneh
+        </footer>
+    </section>
+
 </body>
 
 </html>

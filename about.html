@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css" />
     <title>Todo</title>
 </head>
 
@@ -13,16 +14,22 @@
             <nav>
                 <ul>
                     <a href="index.html">
-                        <li>Home</li>
+                        <li> <img src="./assets/logo.png" /> </li>
                     </a>
-                    <a href="about.html">
-                        <li>About</li>
-                    </a>
+                    <div class="navigation">
+                        <a href="index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="about.html">
+                            <li>About</li>
+                        </a>
+                    </div>
+
+
                 </ul>
             </nav>
             <h2>
-                <img src="./assets/logo.png" />
-                Todo Project
+                Todo List
             </h2>
         </header>
     </section>
@@ -31,21 +38,19 @@
             <h3>Tasneem Hassasneh</h3>
         </section>
         <section>
-            <form>
-                <caption>Contact information</caption>
-                <div>
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="name"/>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="email"/>
-                </div>
-                <div>
-                    <label>Message</label>
-                    <textarea>...your message</textarea>
-                </div>
-            </form>
+            <form >
+                <label for="fname"> Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
+            
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email..">
+            
+                <label for="message">Message</label>
+                <textarea type="text" id="message" name="messaege" placeholder="Your message.."></textarea>
+                
+              
+                <input type="submit" value="Submit">
+              </form>
         </section>
     </main>
 
